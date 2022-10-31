@@ -1,0 +1,5 @@
+<app-sidebar-menu  class="mr-20" [isExpanded]="!sidebarExpanded" (toggleSidebar)="sidebarExpanded = !sidebarExpanded"></app-sidebar-menu>
+<div class="content" [ngClass]="{'sidebarExpanded': sidebarExpanded }"> 
+    <router-outlet ></router-outlet>
+</div>
+

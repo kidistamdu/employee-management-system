@@ -1,0 +1,14 @@
+{
+  "targets": {
+    "fir-angular-auth-aba15": {
+      "hosting": {
+        "manager": [
+          "fir-angular-auth-aba15"
+        ]
+      }
+    }
+  },
+  "projects": {
+    "default": "fir-angular-auth-aba15"
+  }
+}

@@ -1,0 +1,219 @@
+{
+  "employee": [
+    {
+      "id": 5,
+      "name": "Alfride Taju",
+      "email": "alferidamdu@gmail.com",
+      "salary": "20000",
+      "image": "",
+      "address": "Wu Han Da Dao Chu Kou",
+      "mobile": 15802787044,
+      "position": "Project Manager"
+    },
+    {
+      "id": 6,
+      "name": "KIDIST AMDU MIDRU",
+      "email": "kiddoamdu@gmail.com",
+      "salary": 20000,
+      "image": "",
+      "address": "Wu Han Da Dao Chu Kou",
+      "mobile": 15802787044,
+      "position": "Back-End Developer",
+      "gender": "male"
+    },
+    {
+      "id": 7,
+      "name": "bereket",
+      "email": "bereketoamdu@gmail.com",
+      "salary": 2000,
+      "image": "",
+      "address": "Wu Han Da Dao Chu Kou",
+      "mobile": 15802787044,
+      "position": "Front-End Developer",
+      "gender": "female"
+    },
+    {
+      "id": 11,
+      "name": "KIDIST AMDU MIDRU",
+      "email": "kiddoamdu@gmail.com",
+      "salary": 6000,
+      "image": "",
+      "address": "Wu Han Da Dao Chu Kou",
+      "mobile": 15802787044,
+      "position": "Project Manager",
+      "gender": "male"
+    },
+    {
+      "id": 19,
+      "name": "KIDIST AMDU MIDRU",
+      "email": "kiddoamdu@gmail.com",
+      "salary": "2000",
+      "image": "",
+      "address": "Wu Han Da Dao Chu Kou",
+      "mobile": 15802787044,
+      "position": "Front-End Developer",
+      "gender": null
+    },
+    {
+      "id": 20,
+      "name": "KIDIST AMDU MIDRU",
+      "email": "kiddoamdu@gmail.com",
+      "salary": "4000",
+      "image": "",
+      "address": "Wu Han Da Dao Chu Kou",
+      "mobile": 15802787044,
+      "position": "Front-End Developer",
+      "gender": null
+    },
+    {
+      "id": 21,
+      "name": "KIDIST AMDU MIDRU",
+      "email": "kiddoamdu@gmail.com",
+      "salary": "600",
+      "image": "",
+      "address": "Wu Han Da Dao Chu Kou",
+      "mobile": 15802787044,
+      "position": "Project Manager",
+      "gender": ""
+    },
+    {
+      "id": 22,
+      "name": "KIDIST AMDU MIDRU",
+      "email": "kiddoamdu@gmail.com",
+      "salary": "4000",
+      "image": "",
+      "address": "Wu Han Da Dao Chu Kou",
+      "mobile": 15802787044,
+      "position": "Front-End Developer",
+      "gender": ""
+    },
+    {
+      "id": 23,
+      "name": "KIDIST AMDU MIDRU",
+      "email": "kiddoamdu@gmail.com",
+      "salary": 4000,
+      "image": "",
+      "address": "Wu Han Da Dao Chu Kou",
+      "mobile": 15802787044,
+      "position": "Front-End Developer",
+      "gender": "male"
+    },
+    {
+      "id": 24,
+      "name": "KIDIST AMDU MIDRU",
+      "email": "kiddoamdu@gmail.com",
+      "salary": 600,
+      "image": "",
+      "address": "Wu Han Da Dao Chu Kou",
+      "mobile": 15802787044,
+      "position": "Front-End Developer",
+      "gender": "female"
+    },
+    {
+      "id": 25,
+      "name": "KIDIST AMDU MIDRU",
+      "email": "kiddoamdu@gmail.com",
+      "salary": 4000,
+      "image": "",
+      "address": "Wu Han Da Dao Chu Kou",
+      "mobile": 15802787044,
+      "position": null,
+      "gender": "male"
+    },
+    {
+      "id": 26,
+      "name": "KIDIST AMDU MIDRU",
+      "email": "kiddoamdu@gmail.com",
+      "salary": 600,
+      "image": "",
+      "address": "Wu Han Da Dao Chu Kou",
+      "mobile": 15802787044,
+      "position": "Project Manager",
+      "gender": "female"
+    },
+    {
+      "id": 27,
+      "name": "KIDIST AMDU MIDRU",
+      "email": "kiddoamdu@gmail.com",
+      "salary": 600,
+      "image": "",
+      "address": "Wu Han Da Dao Chu Kou",
+      "mobile": 15802787044,
+      "position": "Project Manager",
+      "gender": "male"
+    }
+  ],
+  "contract": [
+    {
+      "employeeId": "1",
+      "title": "new contract",
+      "startingDate": "2022-10-02",
+      "endingDate": "2022-10-15",
+      "contractImage": "",
+      "id": 1
+    },
+    {
+      "employeeId": "2",
+      "title": "new",
+      "startingDate": "2022-10-01",
+      "endingDate": "2022-10-31",
+      "contractImage": "",
+      "id": 2,
+      "contractsImage": ""
+    },
+    {
+      "employeeId": "2",
+      "title": "new",
+      "startingDate": "2022-10-01",
+      "endingDate": "2022-10-31",
+      "contractImage": "",
+      "id": 3,
+      "contractsImage": ""
+    },
+    {
+      "employeeId": "9",
+      "title": "b",
+      "startingDate": "2022-10-02",
+      "endingDate": "2022-10-22",
+      "contractImage": "",
+      "id": 4,
+      "contractsImage": ""
+    },
+    {
+      "employeeId": "10",
+      "title": "jjkkk",
+      "startingDate": "2022-10-13",
+      "endingDate": "2022-10-16",
+      "contractImage": "",
+      "id": 5,
+      "contractsImage": ""
+    },
+    {
+      "employeeId": "12",
+      "title": "gg",
+      "startingDate": "2022-10-17",
+      "endingDate": "",
+      "contractImage": "",
+      "id": 6,
+      "contractsImage": ""
+    },
+    {
+      "employeeId": "14",
+      "title": "",
+      "startingDate": "",
+      "endingDate": "",
+      "contractImage": "",
+      "id": 7,
+      "contractsImage": ""
+    },
+    {
+      "employeeId": "5",
+      "title": "new",
+      "startingDate": "2022-10-02",
+      "endingDate": "2022-10-25",
+      "contractImage": "",
+      "id": 8,
+      "contractsImage": ""
+    }
+  ]
+}

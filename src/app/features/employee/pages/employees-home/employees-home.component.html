@@ -1,0 +1,158 @@
+<div class="container-fluid">
+    <app-nav-bar > </app-nav-bar>
+  <table class="table table-hover">
+    <thead>
+      <tr>
+        <th scope="col">Employee ID</th>
+        <th scope="col">Name</th>
+        <th scope="col">Email</th>
+        <th scope="col">Salary</th>
+        <th scope="col">Action</th>
+       
+        
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let employee of empList  | paginate: { itemsPerPage:10, currentPage: page , totalItems:totalLength  }" >
+        <td>{{employee.id}}</td>
+        <td>{{employee.name}}</td>
+        <td>{{employee.email}}</td>
+        <td>{{employee.salary}}</td>
+        <td>
+          <button type="button" class="btn btn-outline-secondary "  ><a routerLink="/employeesDetail/{{employee.id}}"> View </a></button>
+      
+            <button type="button" class="btn btn-outline-primary me-2" data-bs-toggle="modal" data-bs-target="#editEmployee" (click)="editEmployee(employee)">Edit</button>
+            <button type="button" class="btn btn-outline-danger me-2" (click)="deleteEmployee(employee)" >Delete</button>
+           
+        </td>
+        
+      </tr>   
+    </tbody>
+  </table>
+
+    <div class="modal fade" id="addEmployee" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLabel">Add new Employee</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+            
+              <form [formGroup]='empDetail' >
+                  <div class="mb-3">
+                      <label for="exampleInputEmail1" class="form-label" >Name </label>
+                      <input type="text" formControlName="name" class="form-control" required id="name" aria-describedby="emailHelp">
+                    </div>
+                  <div class="mb-3">
+                    <label for="exampleInputEmail1" class="form-label">Email </label>
+                    <input type="email" formControlName="email" class="form-control" id="email" required aria-describedby="emailHelp">
+                  </div>
+                  <div class="form-check">
+                    <input class="form-check-input" formControlName="gender" type="radio" name="gender" id="flexRadioDefault1" value="male">
+                    <label class="form-check-label" for="flexRadioDefault1">
+                      Male
+                    </label>
+                  </div>
+                  <div class="form-check">
+                    <input class="form-check-input" type="radio" formControlName="gender" name="gender" id="flexRadioDefault2" value="female" checked>
+                    <label class="form-check-label" for="flexRadioDefault2">
+                      Female
+                    </label>
+                  </div>
+                  <div class="mb-3">
+                    <label for="exampleInputEmail1" class="form-label">Position </label>
+                    <input type="text" formControlName="position" class="form-control" id="position" required aria-describedby="emailHelp">
+                  </div>
+                  <div class="mb-3">
+                    <label for="exampleInputEmail1" class="form-label">Phone Number </label>
+                    <input type="number" formControlName="mobile" class="form-control" id="mobile" required aria-describedby="emailHelp">
+                  </div>
+                  <div class="mb-3">
+                    <label for="exampleInputEmail1" class="form-label">Address </label>
+                    <input type="text" formControlName="address" class="form-control" id="address" required aria-describedby="emailHelp">
+                  </div>
+                  <div class="mb-3">
+                      <label for="exampleInputEmail1" class="form-label">Salary </label>
+                      <input type="number" formControlName="salary" class="form-control" id="salary" required aria-describedby="emailHelp">
+                    </div>
+                    <label class="form-label" for="customFile">Upload image</label>
+                    <input type="file" class="form-control" id="customFile" (change)="onChange($event)" />
+                   
+  
+                  <div class="modal-footer">
+                      <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                      <button type="button" class="btn btn-primary" data-bs-dismiss="modal" (click)="addEmployee()" >Add employee</button>
+                    </div>
+                    
+                </form>
+  
+          </div>
+          
+        </div>
+      </div>
+    </div>
+
+    <div class="modal fade" id="editEmployee" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLabel">Edit employee details</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+  
+              <form>
+                  <div class="mb-3">
+                      <label for="exampleInputEmail1" class="form-label">Name </label>
+                      <input type="text" [(ngModel)]="empObj.name" class="form-control" name="name" />
+                    </div>
+                  <div class="mb-3">
+                    <label for="exampleInputEmail1" class="form-label">Email </label>
+                    <input type="email" [(ngModel)]="empObj.email" class="form-control" name="email" />
+                  </div>
+                  <div class="form-check">
+                    <input class="form-check-input" [(ngModel)]="empObj.gender"formControlName="gender" type="radio" name="gender" id="flexRadioDefault1" value="male">
+                    <label class="form-check-label" for="flexRadioDefault1">
+                      Male
+                    </label>
+                  </div>
+                  <div class="form-check">
+                    <input class="form-check-input" type="radio" formControlName="gender" [(ngModel)]="empObj.gender" name="gender" id="flexRadioDefault2" value="female" checked>
+                    <label class="form-check-label" for="flexRadioDefault2">
+                      Female
+                    </label>
+                  </div>
+                  <div class="mb-3">
+                    <label for="exampleInputEmail1" class="form-label">Position </label>
+                    <input type="position" [(ngModel)]="empObj.position" class="form-control" name="position"/>
+                  </div>
+                  <div class="mb-3">
+                    <label for="exampleInputEmail1" class="form-label">Phone Number </label>
+                    <input type="number" [(ngModel)]="empObj.mobile" class="form-control" name="mobile" />
+                  </div>
+                  <div class="mb-3">
+                    <label for="exampleInputEmail1" class="form-label">Address </label>
+                    <input type="text" [(ngModel)]="empObj.address" class="form-control" name="address" />
+                  </div>
+                  <div class="mb-3">
+                      <label for="exampleInputEmail1" class="form-label">Salary </label>
+                      <input type="text" [(ngModel)]="empObj.salary"  class="form-control" name="salary"/>
+                    </div>
+                    
+                    <label class="form-label" for="customFile">Upload image</label>
+                    <input type="file" class="form-control" id="customFile" (change)="onChange($event)" />
+                  <div class="modal-footer">
+                      <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                      <button type="button" class="btn btn-outline-success" data-bs-dismiss="modal" (click)="updateEmployee()">Update </button>
+                    </div>
+                </form>
+  
+          </div>
+        </div>
+      </div>
+    </div>
+        
+ 
+  </div> 
+  <pagination-controls class="text-center" (pageChange)="page = $event"></pagination-controls>

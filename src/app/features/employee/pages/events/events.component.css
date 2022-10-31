@@ -1,0 +1,36 @@
+.container-fluid{
+    align-items: center;
+    margin-left: 500px;
+    margin-top: 100px;
+  
+}
+.container-fluid h1{
+   
+}
+.events{
+    height: 400px;
+    width: 500px;
+    background-color:lightblue;
+    border-radius: 3px;
+}
+.event-1{
+    box-shadow: black;
+    height: 200px;
+    border-radius: 5px;
+    width: 500px;
+    background-color:rgb(97, 152, 170);
+}
+h2{
+    align-items: center;
+    margin-left: 50px;
+    padding-top: 20px;
+}
+svg{
+    margin-left: 20px;
+}
+button{
+    margin-top: 20px;
+    margin-left: 20px;
+}
+
+

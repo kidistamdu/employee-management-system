@@ -1,0 +1,93 @@
+
+.sidebar{
+  height: 100%;
+width: 150px;
+position: absolute;
+left: 0;
+top: 0;
+padding-top: 40px;
+background-color: lightblue;
+
+}
+h1 .title{
+  font-size: 20px;
+ 
+  
+}
+.content{
+  padding: 15px;
+font-size: 16px;
+
+}
+.content-1{
+  margin-bottom: 30px;
+}
+.content-2{
+  margin-bottom: 30px;
+}
+
+.content-1:hover{
+  background-color: rgb(32, 117, 173);
+  height: 50px;
+  padding-top: 13px;
+  padding-bottom: 5px;
+  width: 150px;
+  /* transition: 0.3s; */
+  border-radius: 0 5px 5px 0;
+  position: fixed;
+  color:wheat;
+  left: 0;
+  padding-left: 10px;
+
+  
+
+}
+.content-2:hover{
+  background-color: rgb(32, 117, 173);
+  height: 50px;
+  padding-top: 13px;
+  padding-bottom: 5px;
+  width: 150px;
+  padding-left: 10px;
+  border-radius: 0 5px 5px 0;
+  /* transition: 0.3s; */
+  position: fixed;
+  color:wheat;
+  left: 0;
+
+}
+.content-3:hover{
+  background-color: rgb(32, 117, 173);
+  height: 50px;
+  padding-top: 13px;
+  padding-bottom: 5px;
+  width: 150px;
+  padding-left: 10px;
+  border-radius: 0 5px 5px 0;
+  /* transition: 0.3s; */
+  position: fixed;
+  
+  color:wheat;
+  left: 0;
+
+}
+.button-1{
+  margin-top: 483px;
+  background-color: rgb(127, 193, 214);
+  left: 0;
+  width: 150px;
+  padding-left: 10px;
+  border-radius: 0 5px 5px 0;
+  height: 50px;
+  padding-top: 13px;
+  padding-bottom: 5px;
+  position: fixed;
+  text-decoration: none;
+  border-color:rgb(127, 193, 214) ;
+  border-style: none;
+
+  
+}
+
+
+

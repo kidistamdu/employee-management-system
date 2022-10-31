@@ -1,0 +1,115 @@
+
+        <div class="container-fluid" >
+          <section style="background-color: #eee;" >
+              <div class="container py-5">
+                
+                <button class="btn btn-outline-success" data-bs-toggle="modal" data-bs-target="#addEmployee" type="submit"> Add Contract</button>
+ 
+                
+                <table class="table table-hover text-nowrap table-sm">
+                  <thead>
+                    <tr >
+                      <th scope="col">Title</th>
+                      <th scope="col">startingDate</th>
+                      <th scope="col">EndingDate</th>
+                      <th scope="col">Actions</th>
+               
+                    </tr>
+                  </thead>
+                    <tbody *ngFor="let empContracts of empList" >
+                      <td>{{empContracts.title}}</td>
+                      <td>{{empContracts.startingDate}}</td>
+                      <td>{{empContracts.endingDate}}</td>
+                      <td>
+                        <button type="button" class="btn btn-outline-secondary "><a routerLink="/contractDetail/{{empContracts.id}}"> View </a></button>
+                        <button type="button" class="btn btn-outline-primary me-2" data-bs-toggle="modal" data-bs-target="#editEmployee" (click)="editContract(empContracts)">Edit</button>
+                        <button type="button" class="btn btn-outline-danger me-2" (click)="deleteContract(empContracts)" >Delete</button>
+                      </td>
+                  </tbody>
+                </table>
+                  
+             
+                <div class="modal fade" id="addEmployee" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                  <div class="modal-dialog">
+                    <div class="modal-content">
+                      <div class="modal-header">
+                        <h5 class="modal-title" id="exampleModalLabel">Add Contract </h5>
+                      </div>
+
+                   <div class="modal-body">
+
+                <form [formGroup]='empDetail' >
+                  <div class="mb-3">
+                    <label for="exampleInputTitle" class="form-label">Contract Title </label>
+                    <input type="text"  formControlName="title"  class="form-control" id="title" required aria-describedby="emailHelp">
+                  </div>
+                  <div class="mb-3">
+                    <label for="exampleInputStartingDate" class="form-label">Starting Date </label>
+                    <input type="date" matInput  formControlName="startingDate" class="form-control" id="startingDate" required aria-describedby="emailHelp">
+                    
+                  </div>
+                  <div class="mb-3">
+                      <label for="exampleInputEndingDate" class="form-label">Ending Date </label>
+                      <input type="date"   formControlName="endingDate" class="form-control" id="endingdate" required aria-describedby="emailHelp">
+                    </div>
+                    <label class="form-label" for="customFile">Upload image</label>
+                    <input type="file" class="form-control" id="customFile" (change)="onChange($event)" />
+                  <div class="modal-footer">
+                      <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                      <button type="button" class="btn btn-primary" data-bs-dismiss="modal"  (click)="addContract()">Add Contract</button>
+                    </div>
+                    
+                </form>
+              </div>
+          
+            </div>
+          </div>
+        </div>
+                
+
+
+
+  <div class="modal fade" id="editEmployee" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">Edit Contract</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+
+        <div class="modal-body">
+
+            <form>
+                <div class="mb-3">
+                  <div id="date-picker-example" class="md-form md-outline input-with-post-icon datepicker" inline="true">
+                    <label for="example">Contract Title</label>
+                    <input placeholder="Select date" [(ngModel)]="empObj.title" name="title" type="text" id="example" class="form-control">
+                    
+                    <i class="fas fa-calendar input-prefix"></i>
+                  </div>
+                  <div id="date-picker-example" class="md-form md-outline input-with-post-icon datepicker" inline="true">
+                    <label for="example">Starting date</label>
+                    <input placeholder="Select date" type="date" [(ngModel)]="empObj.startingDate" name="startingDate" id="example" class="form-control">
+                  
+                    <i class="fas fa-calendar input-prefix"></i>
+                  </div>
+                </div>
+                <div class="mb-3">
+                  <div id="date-picker-example" class="md-form md-outline input-with-post-icon datepicker" inline="true">
+                    <label for="example">Ending date</label>
+                    <input placeholder="Select date" type="date" name="endingDate" [(ngModel)]="empObj.endingDate" id="example" class="form-control">
+                  <i class="fas fa-calendar input-prefix"></i>
+                  </div>
+                </div>
+                <label class="form-label" for="customFile">Upload image</label>
+                <input type="file" class="form-control" id="customFile" [(ngModel)]="empObj.contractImage" (change)="onChange($event)" />
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-outline-success" data-bs-dismiss="modal" (click)="updateContract()"> Update </button>
+                  </div>
+              </form>
+            
+        </div>
+      </div>
+    </div>
+  </div>
